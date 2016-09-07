@@ -1,6 +1,7 @@
 
 import React from 'react';
 import MenuHeader from './HeaderMenu';
+import NewsContainer from './NewsContainer';
 require('normalize.css/normalize.css');
 require('styles/App.css');
 
@@ -10,6 +11,9 @@ class AppComponent extends React.Component {
     return (
       <div id="main">
         <MenuHeader />
+        <div>
+          <NewsContainer />
+        </div>
       </div>
     );
   }

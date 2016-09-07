@@ -1,0 +1,24 @@
+#panel-news{
+    background-color: #ecf0f1;
+    border-color: #ecf0f1;
+    margin-left: 10% ;
+    margin-right: 35% ;
+    margin-top: 5%;
+}
+
+.img-circle {
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.news-button{
+  background-color: #7f8c8d;
+  color: white;
+  border-color: #7f8c8d;
+  border-width: 0px;
+  text-align: center;
+  margin-top: 3%;
+  font-size: 100%;
+  font-weight: bold;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
