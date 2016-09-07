@@ -9,7 +9,7 @@ class HeaderMenu extends React.Component {
   render() {
     return (
       <Navbar inverse>
-      <img src={menuImage} alt="menu icon" />
+      <input type="image" src={menuImage} alt="menu icon" />
   </Navbar>
     );
   }

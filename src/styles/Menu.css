@@ -1,6 +1,8 @@
 
 
 .navbar{
-  background: #e74c3c           !important;
-   color: #ecf0f1               !important;
+  background: #e74c3c     !important;
+   color: #ecf0f1         !important;
+   border-color: #e74c3c  !important;
+   border-radius: 2px     !important;
 }
