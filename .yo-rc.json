@@ -1,0 +1,18 @@
+{
+  "generator-react-webpack": {
+    "appName": "reactBasicUi",
+    "style": "css",
+    "postcss": false,
+    "generatedWithVersion": 3
+  },
+  "generator-racket": {
+    "generatorVersion": "1.6.0",
+    "appName": "pruebaRappi",
+    "filters": {
+      "css": true,
+      "reduxSaga": true,
+      "reduxThunk": false,
+      "reduxForm": false
+    }
+  }
+}
