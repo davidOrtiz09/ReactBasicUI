@@ -3,7 +3,7 @@ logs
 *.log
 
 #Osx files
-.DS_Store
+*.DS_Store
 
 # Runtime data
 pids
