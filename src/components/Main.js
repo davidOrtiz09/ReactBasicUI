@@ -4,6 +4,7 @@ import MenuHeader from './HeaderMenu';
 import NewsContainer from './NewsContainer';
 require('normalize.css/normalize.css');
 require('styles/App.css');
+var titleInfo = "Falcao pide no ir sentado en el bus de la selección";
 
 
 class AppComponent extends React.Component {
@@ -12,7 +13,8 @@ class AppComponent extends React.Component {
       <div id="main">
         <MenuHeader />
         <div>
-          <NewsContainer />
+          <NewsContainer title={titleInfo} color ="0"/>
+          <NewsContainer title={titleInfo} color ="1"/>
         </div>
       </div>
     );
