@@ -1,11 +1,11 @@
 
-import React from 'react';
+var React = require('react');
 var Navbar =  require('react-bootstrap').Navbar;
 let menuImage = require('../images/Row-48.png');
 require('normalize.css/normalize.css');
 require('styles/Menu.css');
 
-class HeaderMenu extends React.Component {
+var HeaderMenu =  React.createClass({
   render() {
     return (
       <Navbar inverse>
@@ -13,7 +13,7 @@ class HeaderMenu extends React.Component {
   </Navbar>
     );
   }
-}
+});
 
 
-export default HeaderMenu;
+module.exports = HeaderMenu;
