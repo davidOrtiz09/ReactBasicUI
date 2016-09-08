@@ -9,7 +9,8 @@ require('styles/newsContainers.css');
 var  NewsContainer = React.createClass({
   getInitialState: function() {
         return {
-            iconColor:require('../images/BlueArrow.png')
+            iconColor:require('../images/BlueArrow.png'),
+            showNews: false
         };
     },
 componentDidMount:function() {
@@ -23,17 +24,20 @@ componentDidMount:function() {
       <div>
       <div id='panel-news' className='row'>
       <div className='col-xs-4 col-sm-2 col-md-2'>
-      <input className='img-circle' type='image' src={this.state.iconColor} alt='arrow icon' />
+      <input className='img-circle' type='image' src={this.state.iconColor} alt='arrow icon' onClick={this.openNews} />
       </div>
       <div id='cajita' className='col-xs-8 col-sm-9 col-md-8'>
-      <button type='button' className='news-button'>
+      <button type='button' className='news-button' onClick={this.openNews}>
       {this.props.title}
       </button>
       </div>
     </div>
-    <Detail image={sadFalco} show={true} paragraph={falca}/>
+    <Detail image={sadFalco} show={this.state.showNews} paragraph={falca}/>
   </div>
     );
+  },
+  openNews:function(){
+    this.setState({showNews:!this.state.showNews});
   }
 });
 
