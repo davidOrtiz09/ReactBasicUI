@@ -25,6 +25,9 @@ AppDispatcher.register(function(payload){
           dataNews = payload.result;
 					newsStore.emitChange();
 					break;
+    case appConstants.START_ALL :
+      handleData( payload.result);
+    newsStore.emitChange();
 							}
 });
 
