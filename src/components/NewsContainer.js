@@ -1,7 +1,5 @@
 
 var React = require('react');
-var sadFalco = 'http://www.las2orillas.co/wp-content/uploads/2014/01/falcao_garcia3.jpg'
-var falca = 'Una novedad inesperada trajo el nuevo bus de la selección Colombia que será estrenado por el equipo de Pekerman la próxima semana cuando este se reúna para enfrentar a Perú en Barranquilla por la primera fecha de las eliminatorias a Rusia 2018.'
 var Detail =  require('./NewsDetail');
 require('normalize.css/normalize.css');
 require('styles/newsContainers.css');
@@ -32,7 +30,7 @@ componentDidMount:function() {
       </button>
       </div>
     </div>
-    <Detail image={sadFalco} show={this.state.showNews} paragraph={falca}/>
+    <Detail image={this.props.image} show={this.state.showNews} paragraph={this.props.cont}/>
   </div>
     );
   },

@@ -1,10 +1,10 @@
 'use strict';
 var EventEmitter = require('../emitter');
-var AppConstants = require('../constants/AppConstants');
+let AppConstants = require('config/constants');
 
 
 var Store =  function() {
- 
+
 	this.emitChange = function() {
     EventEmitter.emit(AppConstants.CHANGE_EVENT);
   },

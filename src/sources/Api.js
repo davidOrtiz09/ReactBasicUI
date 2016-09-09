@@ -12,9 +12,9 @@ let Api ={
             }.bind(this));
     },
       getNewsOffline:function(){
-        let mock = require('config/news_mock.json');
-        this.dispatcher(appConstants.START_ALL,mock);
 
+       var mock = require("json!./news_mock.json");
+        this.dispatcher(appConstants.START_ALL_STATIC,mock);
       },
 dispatcher:function(type,result){
  appDispatcher.dispatch({

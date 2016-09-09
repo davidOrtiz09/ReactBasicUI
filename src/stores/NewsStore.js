@@ -1,56 +1,31 @@
 'use strict';
 var AppDispatcher = require('../dispatcher');
 var Store = require('./Store');
-let appConstants = require('config/constants.js');
-var merge = require('merge');
+let appConstants = require('config/constants');
+let merge = require('merge');
 
-
+var dataNews = [];
 
 var newsStore = merge( new Store(),{
-    getStateAcces: function() {
-        return login_state;
-    },
-    getFlagState:function(){
-    	return flag;
+    getNewsDataState: function() {
+        return dataNews;
     }
 });
 
-function persistLogInData(response){
-	if(response === "true"){
-          login_state = AppConstants.EXITO;
-        } else{
-          login_state = AppConstants.ERROR;
-        }
-}
 
+function handleData(response){
 
-function adminResponse(response){
-	flag = true;
-	if(response === "true"){
-          admin_state = AppConstants.EXITO;
-        } else{
-          admin_state = AppConstants.ERROR;
-        }
-
+dataNews = JSON.parse(response);
 
 }
 
 AppDispatcher.register(function(payload){
 	switch(payload.actionType){
-		case AppConstants.LOG_IN :
-
-					persistLogInData(payload.result);
-					loginStore.emitChange();
-
+		case appConstants.START_ALL_STATIC :
+          dataNews = payload.result;
+					newsStore.emitChange();
 					break;
-		case AppConstants.REQ_ADMIN :
-
-           adminResponse(payload.result);
-		       loginStore.emitChange();
-		            break;
-
 							}
-
 });
 
 module.exports = newsStore;
