@@ -13,7 +13,7 @@ var  NewsContainer = React.createClass({
     },
 componentDidMount:function() {
   var desicion = this.props.color;
-  if(desicion == '1'){
+  if(desicion){
     this.setState({iconColor:require('../images/GreenArrow.png')});
   }
 },
@@ -24,7 +24,7 @@ componentDidMount:function() {
       <div className='col-xs-4 col-sm-2 col-md-2'>
       <input className='img-circle' type='image' src={this.state.iconColor} alt='arrow icon' onClick={this.openNews} />
       </div>
-      <div id='cajita' className='col-xs-8 col-sm-9 col-md-8'>
+      <div className='col-xs-8 col-sm-9 col-md-8'>
       <button type='button' className='news-button' onClick={this.openNews}>
       {this.props.title}
       </button>

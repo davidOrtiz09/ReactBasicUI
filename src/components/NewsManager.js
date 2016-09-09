@@ -9,10 +9,11 @@ var  NewsManager = React.createClass({
 
   render:function() {
     var listData = this.props.data;
-    var colorNum = '1';
+    var colorNum = true;
     return(
       <div>
         {listData.map(function(result) {
+          colorNum = !colorNum;
                         return <NewsContainer color={colorNum}
                                                title={result.title}
                                                image={result.image}
