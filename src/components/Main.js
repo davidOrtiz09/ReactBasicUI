@@ -5,7 +5,6 @@ var NewsManager = require('./NewsManager');
 var newsStore = require('stores/NewsStore');
 require('normalize.css/normalize.css');
 require('styles/App.css');
-var titleInfo = 'Falcao pide no ir sentado en el bus de la selección';
 
 var AppComponent =  React.createClass({
   getInitialState: function() {

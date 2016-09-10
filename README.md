@@ -11,4 +11,6 @@ Para iniciar la aplicación, clone el proyecto y a continuación digite:
  de donde se quiere consumir el servicio. También debe cambiar las constantes *PORT* y  
  *RESOURCE*  donde debe escribir el puerto del host y la url del recurso respectivamente.
 
- Finalmente dirijase al archivo "src/actions/AppActions.js"
+ Finalmente dirijase al archivo "src/actions/AppActions.js" y en la funcion "startNews"
+ponga como comentario la funcion *api.getNewsOffline()* y quite habilite la función
+*api.getNewsOnline()*.

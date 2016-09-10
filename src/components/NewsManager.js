@@ -14,7 +14,8 @@ var  NewsManager = React.createClass({
       <div>
         {listData.map(function(result) {
           colorNum = !colorNum;
-                        return <NewsContainer color={colorNum}
+                        return <NewsContainer  key={result.id}
+                                               color={colorNum}
                                                title={result.title}
                                                image={result.image}
                                                cont={result.content}
